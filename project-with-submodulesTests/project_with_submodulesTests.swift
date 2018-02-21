@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import Dependency
+
 @testable import project_with_submodules
 
 class project_with_submodulesTests: XCTestCase {
@@ -22,8 +24,9 @@ class project_with_submodulesTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let foo = Dependency.Foo(message: "Hello World")
+        
+        XCTAssertEqual("Hello World", foo.hello())
     }
     
     func testPerformanceExample() {

@@ -23,6 +23,27 @@
 			remoteGlobalIDString = BD97B980203CF67A002C68D5;
 			remoteInfo = "project-with-submodules";
 		};
+		BD97B9DF203E22FD002C68D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD97B9DA203E22FD002C68D5 /* Dependency.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BD97B9BE203E21DF002C68D5;
+			remoteInfo = Dependency;
+		};
+		BD97B9E1203E22FD002C68D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD97B9DA203E22FD002C68D5 /* Dependency.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BD97B9C7203E21DF002C68D5;
+			remoteInfo = DependencyTests;
+		};
+		BD97B9E3203E2305002C68D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD97B9DA203E22FD002C68D5 /* Dependency.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BD97B9BD203E21DF002C68D5;
+			remoteInfo = Dependency;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +57,7 @@
 		BD97B995203CF67A002C68D5 /* project-with-submodulesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "project-with-submodulesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD97B999203CF67A002C68D5 /* project_with_submodulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project_with_submodulesTests.swift; sourceTree = "<group>"; };
 		BD97B99B203CF67A002C68D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD97B9DA203E22FD002C68D5 /* Dependency.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dependency.xcodeproj; path = dependency/Dependency.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +81,7 @@
 		BD97B978203CF67A002C68D5 = {
 			isa = PBXGroup;
 			children = (
+				BD97B9DA203E22FD002C68D5 /* Dependency.xcodeproj */,
 				BD97B983203CF67A002C68D5 /* project-with-submodules */,
 				BD97B998203CF67A002C68D5 /* project-with-submodulesTests */,
 				BD97B982203CF67A002C68D5 /* Products */,
@@ -96,6 +119,15 @@
 			path = "project-with-submodulesTests";
 			sourceTree = "<group>";
 		};
+		BD97B9DB203E22FD002C68D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD97B9E0203E22FD002C68D5 /* Dependency.framework */,
+				BD97B9E2203E22FD002C68D5 /* DependencyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,6 +143,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BD97B9E4203E2305002C68D5 /* PBXTargetDependency */,
 			);
 			name = "project-with-submodules";
 			productName = "project-with-submodules";
@@ -167,6 +200,12 @@
 			mainGroup = BD97B978203CF67A002C68D5;
 			productRefGroup = BD97B982203CF67A002C68D5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BD97B9DB203E22FD002C68D5 /* Products */;
+					ProjectRef = BD97B9DA203E22FD002C68D5 /* Dependency.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BD97B980203CF67A002C68D5 /* project-with-submodules */,
@@ -174,6 +213,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BD97B9E0203E22FD002C68D5 /* Dependency.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Dependency.framework;
+			remoteRef = BD97B9DF203E22FD002C68D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BD97B9E2203E22FD002C68D5 /* DependencyTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DependencyTests.xctest;
+			remoteRef = BD97B9E1203E22FD002C68D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BD97B97F203CF67A002C68D5 /* Resources */ = {
@@ -236,6 +292,11 @@
 			isa = PBXTargetDependency;
 			target = BD97B980203CF67A002C68D5 /* project-with-submodules */;
 			targetProxy = BD97B996203CF67A002C68D5 /* PBXContainerItemProxy */;
+		};
+		BD97B9E4203E2305002C68D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Dependency;
+			targetProxy = BD97B9E3203E2305002C68D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

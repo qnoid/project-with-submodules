@@ -8,15 +8,15 @@
 
 import UIKit
 
-import HelloWindmill
+import Dependency
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let foo = HelloWindmill.Foo()
-        foo.hello
+        let foo = Dependency.Foo(message: "Hello World")
+        print(foo.hello())
     }
 
     override func didReceiveMemoryWarning() {
