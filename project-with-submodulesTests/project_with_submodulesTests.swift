@@ -29,6 +29,13 @@ class project_with_submodulesTests: XCTestCase {
         XCTAssertEqual("Hello World", foo.hello())
     }
     
+    func testBar() {
+        let bar = Dependency.Bar(message: "bar")
+        
+        XCTAssertEqual("bar", bar.hello())
+    }
+    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
